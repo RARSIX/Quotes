@@ -333,24 +333,24 @@ def gerarpdf(nameNF, nationality, email, dataa, number):
 
     #dados bank da empresa em dublin
     dublin = [
-        ["Bank Name","AIB BANK"],
-        ["IBAN","IE47 AIBK 93 34 22 7435 4004"],
-        ["Account Name","ERIN SCHOOL OF ENGLISH"],
-        ["Swift code","AIBKIE2D"],
-        ["Account number","74354004"],
-        ["Branch sort code ","93-34-22"],
-        ["Bank address","Dublin Road - DUBLIN"]
+        ["Bank Name","DUBLIN Bank Name"],
+        ["IBAN","DUBLIN IBAN"],
+        ["Account Name","Account Name"],
+        ["Swift code","Swift code"],
+        ["Account number","Account number"],
+        ["Branch sort code ","Branch sort code "],
+        ["Bank address","Bank address"]
     ]
 
     #dados bank da empresa em cork
     cork = [
-        ["Bank Name","ALLIED IRISH BANK (AIB)"],
-        ["IBAN","IE65 AIBK 93 11 01 6834 6000"],
-        ["Account Name","Erin School of English"],
-        ["Swift code","AIBKIE2D"],
-        ["Account number","68346000"],
-        ["Branch sort code ","93-11-01"],
-        ["Bank address","Dublin Road - DUBLIN"]
+        ["Bank Name"," CORK Bank Name"],
+        ["IBAN","CORK IBAN"],
+        ["Account Name","Account Name"],
+        ["Swift code","Swift code"],
+        ["Account number","Account number"],
+        ["Branch sort code ","Branch sort code "],
+        ["Bank address","Bank address"]
     ]
    
 
