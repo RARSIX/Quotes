@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Edition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="../static/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <br>
+    <h1>Value Edition</h1>
+    <br>
+
+    <div class="form-container">
+        <form  method="GET">
+            <label for="tabela">Select the table to modify:</label>
+            <div class="dropdown-container">
+            <select id="tabela" name="tabela" onchange="this.form.submit()" required>
+                <option value="valuesDublinM" {% if tabela == 'valuesDublinM' %}selected{% endif %}>Values Dublin - Morning</option>
+                <option value="valuesDublinA" {% if tabela == 'valuesDublinA' %}selected{% endif %}>Values Dublin - Afternoon</option>
+                <option value="valuesCorkM" {% if tabela == 'valuesCorkM' %}selected{% endif %}>Values Cork - Morning</option>
+                <option value="valuesCorkA" {% if tabela == 'valuesCorkA' %}selected{% endif %}>Values Cork - Afternoon</option>
+            </select>
+            </div>
+        </form>
+    </div>
+
+     <br>
+
+    <form method="POST">
+        <input type="hidden" name="tabela" value="{{ tabela }}">
+        <h5>Values {{ tabela }}</h5>
+
+        <br>
+
+        <div class="text-container">
+        
+            <label  class="form-label" for="valor1">25-week course General English/15h (€):</label>
+            <input class="form-control" type="text" name="values" placeholder="Valor" id="valor1" value="{{ values[0] if values|length > 0 else '' }}">
+        
+            <label  class="form-label" for="valor2">Medical insurance (€):</label>
+            <input class="form-control" type="text" name="values" placeholder="Valor" id="valor2" value="{{ values[1] if values|length > 1 else '' }}">
+        
+            <label  class="form-label" for="valor3">Learner protection insurance (€):</label>
+            <input class="form-control" type="text" name="values" placeholder="Valor" id="valor3" value="{{ values[2] if values|length > 2 else '' }}">
+        
+            <label  class="form-label" for="valor4">Textbook (€):</label>
+            <input class="form-control" type="text" name="values" placeholder="Valor" id="valor4" value="{{ values[3] if values|length > 3 else '' }}">
+        
+            <label  class="form-label" for="valor5">EXAM (€):</label>
+            <input class="form-control" type="text" name="values" placeholder="Valor" id="valor5" value="{{ values[4] if values|length > 4 else '' }}">
+    </div>
+    <br><br>
+        <div class="button-group">
+            <button class="button" type="submit">Save</button>
+            <a href="{{ url_for('index') }}">
+                <button class="button" type="button">Back to Home Page</button>
+            </a>
+        </div>
+    </form> 
+
+    <br><br>
+
+</body>
+</html>

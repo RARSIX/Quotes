@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+
+h1,h2,h3,h4,h5 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* label {
+    display: block;
+    margin-bottom: 8px;
+} */
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* .checkbox-container {
+    display: block; /* Faz com que cada container ocupe toda a largura *
+    margin-bottom: 10px; /* Espaço entre os containers *
+    align-items: center; /* Alinha verticalmente, se necessário *
+}
+*/
+/* .checkbox-container label {
+    margin-right: 0px; /* Espaço entre o label e a caixa de seleção *
+} */
+
+/*
+input[type="checkbox"] {
+    margin-left: 10px; /* Espaço entre o texto e a caixa de seleção *
+} */
+
+.dropdown-container {
+    display: flex; /* Alinha o label e o select na mesma linha */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 10px; /* Espaço abaixo do container */
+}
+.dropdown-container label.d{
+    margin-right: 30px;
+}
+
+.dropdown-container label {
+    margin-right: 10px; /* Espaço entre o label e o select */
+}
+
+.dropdown-container select {
+    padding: 5px; /* Espaço interno do select */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda do select */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar sobre o select */
+}
+
+.dropdown-container select.city {
+    padding-right: 25px; /* Espaço interno do select */
+}
+
+.nova-linha-container{
+    margin-bottom: 100px;
+}
+
+
+.config{
+    width: 40px; /* Tamanho padrão */
+    height: 40px; /* Tamanho padrão */
+    transition: transform 0.3s ease; /* Transição suave */
+    display: inline-block; /* Impede que o formulário desça */
+    margin-right: 10px; /* Espaço entre a imagem e o título */
+}
+
+.config:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    justify-content: center;
+}
+
+html body{
+    background-color: #55cc6f8f;
+}
+
+.text-container input{
+    border-radius: 15px;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+button.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.button:hover {
+    background-color: #45a049;
+}
+
+.form-check-input{
+    margin-left: 155px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUDGET</title>
+    <link rel="icon" href="../static/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <img src="{{ url_for('static', filename='config.png') }}" alt="Configuração" class="config" onclick="location.href='{{ url_for('edit') }}';">
+    <script>
+        function adicionarLinha() {
+            const container = document.getElementById('nova-linha-container');
+            const novaLinha = document.createElement('div');
+            novaLinha.className = 'linha-adicional text-container';
+            novaLinha.innerHTML = `
+                <label for="description">Description:</label>
+                <input type="text" name="description" required>
+                <label for="value_euro">Value: (€)</label>
+                <input type="text" name="value_euro" required>
+                <button type="button" onclick="removerLinha(this)">Remove</button>
+                <br><br>
+            `;
+            container.appendChild(novaLinha);
+        }
+
+        function removerLinha(botao) {
+            const linha = botao.parentNode;
+            linha.parentNode.removeChild(linha);
+        }
+    </script>
+</head>
+<body>
+    <h1><b>BUDGET</b> </h1>
+    <h4>ERIN COLLEGE</h4>
+    <br><br>
+
+    <form method="POST">
+        <div class="text-container">
+        <label class="form-label"   for="agent">Agent Name:</label>
+        <input class="form-control" type="text" id="agent" name="agent" value="Renan Willian" required>
+
+        <label class="form-label" for="name">Full name:</label>
+        <input class="form-control" type="text" id="name" name="name" required>
+        
+        <label class="form-label" for="nationality">Nationality:</label>
+        <input class="form-control" type="text" id="nationality" name="nationality" required>
+        
+        <label class="form-label" for="email">Email:</label>
+        <input class="form-control" type="email" id="email" name="email" required>
+        
+        <label class="form-label" for="date">Course Start Date:</label>
+        <input class="form-control" type="date" id="date" name="date" max="9999-12-31" required>
+        
+        <label class="form-label" for="number">Contact Number:</label>
+        <input class="form-control" type="text" id="number" name="number" required>
+
+        <label  class="form-label" for="dep">Deposited: (€)</label>
+        <input class="form-control" type="text" id="dep" name="dep" required>
+        </div>
+
+        <br>
+    
+        <div class="checkbox-container">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="engcourse" id="engcourse" value="yes" checked >
+                <label class="form-check-label" for="engcourse">Course General English: </label>
+            </div>
+        </div>
+
+        <div class="checkbox-container">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="medins" id="medins" value="yes" checked>
+                <label class="form-check-label" for="medins">Medical insurance: </label>
+            </div>
+         </div>
+
+        <div class="checkbox-container">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="leranins" id="leranins" value="yes" checked>
+                <label class="form-check-label" for="leranins">Learn protection insurance: </label>
+            </div>
+        </div>
+
+        <div class="checkbox-container">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="txtbook" id="txtbook" value="yes" checked>
+                <label class="form-check-label" for="txtbook">Textbook: </label>
+            </div>
+        </div>
+
+        <div class="checkbox-container">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="exam" id="exam" value="yes" checked>
+                <label class="form-check-label" for="exam">Exam: </label>
+            </div>
+        </div>
+   
+
+        <br><br>
+
+
+        <div class="dropdown-container">
+        <label class="d" for="city">City:</label>
+        <select id="city" class="city" name="city">
+            <option value="dublin" selected>Dublin</option>
+            <option value="cork">Cork</option>
+        </select>
+      </div>
+
+      <div class="dropdown-container ">
+        <label for="period">Period:</label>
+        <select id="period" name="period">
+            <option value="morning" selected>Morning</option>
+            <option value="afternoon">Afternoon</option>
+        </select>
+      </div>
+      
+
+
+      <br>
+            <div id="nova-linha-container"></div>
+
+            <div class="button-group">
+                <button type="button" onclick="adicionarLinha()">Add Item</button>
+
+                <button type="submit">Generate PDF</button>
+            </div>
+    </form>
+<br><br>
+    <!-- <form action="/test" method="post">
+        
+        <button type="submit">TESTE</button>
+    </form> -->
+    
+</body>
+</html>
